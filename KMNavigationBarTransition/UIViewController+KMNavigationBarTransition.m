@@ -128,6 +128,10 @@
     [self km_adjustScrollViewContentOffsetIfNeeded];
     UINavigationBar *bar = [[UINavigationBar alloc] init];
     bar.km_isFakeBar = YES;
+    // 修复iOS14假的NavigationBar不生效问题
+    if (@available(iOS 14.0, *)) {
+        bar.km_fakeNavigationController = self.navigationController;
+    }
     bar.barStyle = self.navigationController.navigationBar.barStyle;
     if (bar.translucent != self.navigationController.navigationBar.translucent) {
         bar.translucent = self.navigationController.navigationBar.translucent;

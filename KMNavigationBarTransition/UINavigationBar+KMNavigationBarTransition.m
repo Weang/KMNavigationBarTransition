@@ -55,4 +55,12 @@
     objc_setAssociatedObject(self, @selector(km_isFakeBar), @(hidden), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+- (UINavigationController *)km_fakeNavigationController {
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)setKm_fakeNavigationController:(UINavigationController *)controller {
+    objc_setAssociatedObject(self, @selector(km_fakeNavigationController), controller, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 @end
