@@ -28,7 +28,6 @@
 #import "KMWeakObjectContainer.h"
 #import <objc/runtime.h>
 #import "KMSwizzle.h"
-#import "FWSwizzle.h"
 #import "UINavigationBar+KMNavigationBarTransition_internal.h"
 
 @implementation UINavigationController (KMNavigationBarTransition)
@@ -60,16 +59,6 @@
                         @selector(setViewControllers:animated:),
                         [self class],
                         @selector(km_setViewControllers:animated:));
-        
-        if (@available(iOS 14.0, *)) {
-            FWSwizzleClass(UINavigationBar, NSSelectorFromString(@"_accessibility_navigationController"), FWSwizzleReturn(UINavigationController *), FWSwizzleArgs(), FWSwizzleCode({
-                UINavigationController *navigationController = FWSwizzleOriginal();
-                if (selfObject.km_isFakeBar) {
-                    return selfObject.km_fakeNavigationController;
-                }
-                return navigationController;
-            }));
-        }
     });
 }
 

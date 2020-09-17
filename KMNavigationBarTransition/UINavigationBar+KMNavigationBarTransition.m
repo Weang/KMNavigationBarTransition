@@ -35,6 +35,12 @@
                         @selector(layoutSubviews),
                         [self class],
                         @selector(km_layoutSubviews));
+        if (@available(iOS 14.0, *)) {
+            KMSwizzleMethod([self class],
+                            NSSelectorFromString(@"_accessibility_navigationController"),
+                            [self class],
+                            @selector(km_accessibility_navigationController));
+        }
     });
 }
 #endif
@@ -45,6 +51,16 @@
     CGRect frame = backgroundView.frame;
     frame.size.height = self.frame.size.height + fabs(frame.origin.y);
     backgroundView.frame = frame;
+}
+
+- (UINavigationController *) km_accessibility_navigationController {
+    UINavigationController * navigationController = [self km_accessibility_navigationController];
+    if (self.km_isFakeBar) {
+        // if it's fake navigation bar
+        // return previously bound navigationController.
+        return self.km_fakeNavigationController;
+    }
+    return navigationController;
 }
 
 - (BOOL)km_isFakeBar {

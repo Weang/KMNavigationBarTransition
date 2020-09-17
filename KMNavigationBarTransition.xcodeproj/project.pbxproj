@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		C2DDF516251048FC0055C7A7 /* UINavigationBar+KMNavigationBarTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = C2DDF514251048FC0055C7A7 /* UINavigationBar+KMNavigationBarTransition.h */; };
 		C2DDF517251048FC0055C7A7 /* UINavigationBar+KMNavigationBarTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DDF515251048FC0055C7A7 /* UINavigationBar+KMNavigationBarTransition.m */; };
-		C2DDF51A251054CD0055C7A7 /* FWSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DDF518251054CD0055C7A7 /* FWSwizzle.m */; };
-		C2DDF51B251054CD0055C7A7 /* FWSwizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = C2DDF519251054CD0055C7A7 /* FWSwizzle.h */; };
 		CD4209391F7A47CF00A1EAF5 /* UIScrollView+KMNavigationBarTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE74D801F7A457C003052BE /* UIScrollView+KMNavigationBarTransition.h */; };
 		CDA372851C39087D00E39A6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA372841C39087D00E39A6D /* AppDelegate.swift */; };
 		CDA372881C39089200E39A6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA372861C39089200E39A6D /* Main.storyboard */; };
@@ -68,8 +66,6 @@
 /* Begin PBXFileReference section */
 		C2DDF514251048FC0055C7A7 /* UINavigationBar+KMNavigationBarTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+KMNavigationBarTransition.h"; sourceTree = "<group>"; };
 		C2DDF515251048FC0055C7A7 /* UINavigationBar+KMNavigationBarTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+KMNavigationBarTransition.m"; sourceTree = "<group>"; };
-		C2DDF518251054CD0055C7A7 /* FWSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWSwizzle.m; sourceTree = "<group>"; };
-		C2DDF519251054CD0055C7A7 /* FWSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWSwizzle.h; sourceTree = "<group>"; };
 		CDA3726F1C3907CE00E39A6D /* KMNavigationBarTransition-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KMNavigationBarTransition-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA372841C39087D00E39A6D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Example/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		CDA372871C39089200E39A6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Example/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
@@ -194,8 +190,6 @@
 				CDC1BA0D1CE1DFE8006BE1B6 /* KMWeakObjectContainer.m */,
 				CDDFA1F11C3921BD00BFBA1B /* KMSwizzle.h */,
 				CDDFA1F21C3921BD00BFBA1B /* KMSwizzle.m */,
-				C2DDF519251054CD0055C7A7 /* FWSwizzle.h */,
-				C2DDF518251054CD0055C7A7 /* FWSwizzle.m */,
 				CDC01B9C1E5CA46400F6F3E2 /* KMNavigationBarTransition.h */,
 				CDC01B9E1E5CA46900F6F3E2 /* Info.plist */,
 			);
@@ -217,7 +211,6 @@
 				CDC722B01F72590C0077084B /* UINavigationBar+KMNavigationBarTransition_internal.h in Headers */,
 				CDD35A4C1F94CABE00EFDBD8 /* UIScrollView+KMNavigationBarTransition_internal.h in Headers */,
 				CD4209391F7A47CF00A1EAF5 /* UIScrollView+KMNavigationBarTransition.h in Headers */,
-				C2DDF51B251054CD0055C7A7 /* FWSwizzle.h in Headers */,
 				CDC01BA11E5CA48900F6F3E2 /* UIViewController+KMNavigationBarTransition.h in Headers */,
 				CDC01BA31E5CA48D00F6F3E2 /* KMWeakObjectContainer.h in Headers */,
 				CDC01BA51E5CA49100F6F3E2 /* KMSwizzle.h in Headers */,
@@ -347,7 +340,6 @@
 				CDC722B41F72599F0077084B /* NSObject+KMNavigationBarTransition.m in Sources */,
 				CDC01BA41E5CA48F00F6F3E2 /* KMWeakObjectContainer.m in Sources */,
 				CDC01BA61E5CA49300F6F3E2 /* KMSwizzle.m in Sources */,
-				C2DDF51A251054CD0055C7A7 /* FWSwizzle.m in Sources */,
 				C2DDF517251048FC0055C7A7 /* UINavigationBar+KMNavigationBarTransition.m in Sources */,
 				CDC01BA71E5CA67A00F6F3E2 /* UINavigationController+KMNavigationBarTransition.m in Sources */,
 				CDC01BA21E5CA48B00F6F3E2 /* UIViewController+KMNavigationBarTransition.m in Sources */,
